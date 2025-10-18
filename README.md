@@ -12,7 +12,7 @@
 
 **A beautiful, modern weather application with real-time data and stunning glassmorphic design**
 
-[🚀 Live Demo](https://chinmayjha.github.io/Weather-App-UI/) • [🐛 Report Bug](https://github.com/chinmayjha/Weather-App-UI/issues) • [✨ Request Feature](https://github.com/chinmayjha/Weather-App-UI/issues)
+[🚀 Live Demo](http://chinmayjha.tech/Weather-App/) • [🐛 Report Bug](https://github.com/chinmayjha/Weather-App-UI/issues) • [✨ Request Feature](https://github.com/chinmayjha/Weather-App-UI/issues)
 
 </div>
 
