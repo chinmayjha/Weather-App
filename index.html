@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Essential Meta Tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Modern, responsive weather app providing real-time weather information, 5-day forecasts, and detailed meteorological data for any location worldwide. Get accurate weather updates instantly.">
+    <meta name="keywords" content="weather app, weather forecast, current weather, temperature, humidity, wind speed, weather conditions, meteorology, real-time weather, 5-day forecast">
+    <meta name="author" content="Chinmay Jha">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    
+    <!-- Open Graph Meta Tags for Social Sharing -->
+    <meta property="og:title" content="Weather App - Real-Time Weather & Forecasts">
+    <meta property="og:description" content="Get accurate real-time weather information and 5-day forecasts for any location worldwide. Beautiful, responsive design with detailed meteorological data.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://chinmayjha.github.io/Weather-App-UI/">
+    <meta property="og:image" content="https://chinmayjha.github.io/Weather-App-UI/assets/img/og-image.png">
+    <meta property="og:site_name" content="Weather App">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Weather App - Real-Time Weather & Forecasts">
+    <meta name="twitter:description" content="Get accurate real-time weather information and 5-day forecasts for any location worldwide.">
+    <meta name="twitter:image" content="https://chinmayjha.github.io/Weather-App-UI/assets/img/og-image.png">
+    <meta name="twitter:creator" content="@chinmayjha">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/img/favicon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/img/favicon.png">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="./assets/style.css">
+    
+    <!-- Title -->
+    <title>Weather App - Real-Time Weather & 5-Day Forecasts</title>
+    
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Weather App",
+      "description": "Modern weather application providing real-time weather information and forecasts",
+      "url": "https://chinmayjha.github.io/Weather-App-UI/",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "Chinmay Jha",
+        "url": "https://github.com/chinmayjha"
+      }
+    }
+    </script>
+</head>
+<body class="default">
+    <!-- Developer Info Button (Top Right) -->
+    <div class="developer-info-btn" id="developerInfoBtn">
+        <span class="developer-avatar">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                <circle cx="12" cy="7" r="4"/>
+            </svg>
+        </span>
+        <span class="developer-tooltip">About Developer</span>
+    </div>
+
+    <!-- Developer Info Modal -->
+    <div class="developer-overlay" id="developerOverlay" style="display:none;"></div>
+    <div class="developer-modal" id="developerModal" role="dialog" aria-modal="true" aria-labelledby="developerTitle" style="display:none;">
+        <button class="close-btn" id="closeDeveloperBtn" aria-label="Close Developer Info">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+        </button>
+        <div class="developer-modal-content">
+            <div class="developer-header">
+                <div class="developer-photo">
+                    <img src="https://chinmayjha.tech/assets/img/favicon.jpg" alt="Chinmay Jha" class="developer-image">
+                </div>
+                <h2 class="developer-name" id="developerTitle">Chinmay Jha</h2>
+                <p class="developer-role">Student • Web Developer • Freelancer</p>
+            </div>
+            <div class="developer-bio">
+                <p>Hi, I'm Chinmay Jha, a 16-year-old web developer from India. I started coding at 11 with HTML and CSS, and since then, I've been building all kinds of fun and functional web projects—from simple websites to Discord bots. Over time, I've picked up JavaScript and now focus on creating clean, user-friendly interfaces.</p>
+                <p>This weather app is one of my personal projects, built to combine both functionality and aesthetics. I'm always experimenting and learning new things, and projects like this help me push my creativity and skills a little further each time.</p>
+            </div>
+            <div class="developer-links">
+                <a href="https://chinmayjha.tech" target="_blank" rel="noopener" class="developer-link website-link">
+                    <span class="link-icon">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <line x1="2" y1="12" x2="22" y2="12"/>
+                            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                        </svg>
+                    </span>
+                    <span class="link-text">Visit Website</span>
+                    <span class="link-url">chinmayjha.tech</span>
+                </a>
+                <a href="mailto:contact@chinmayjha.tech" class="developer-link email-link">
+                    <span class="link-icon">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                            <polyline points="22,6 12,13 2,6"/>
+                        </svg>
+                    </span>
+                    <span class="link-text">Send Email</span>
+                    <span class="link-url">chinmayjha2021@gmail.com</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Loading Indicator -->
+    <div class="loading">
+        <div class="spinner"></div>
+        <p>Loading weather data...</p>
+    </div>
+
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Search Section -->
+        <div class="search-container">
+            <input 
+                type="text" 
+                id="search-input" 
+                class="search-input" 
+                placeholder="Search for a city..." 
+                aria-label="Search for a city"
+                autocomplete="off"
+            >
+            <button id="search-btn" class="search-btn" aria-label="Search">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <path d="m21 21-4.35-4.35"></path>
+                </svg>
+            </button>
+            <button id="location-btn" class="location-btn" aria-label="Use current location">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 2v20M2 12h20"></path>
+                    <circle cx="12" cy="12" r="7"></circle>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Weather Display -->
+        <main class="weather-app" role="main">
+            <!-- Location and Temperature -->
+            <div class="location-section">
+                <h1 class="location" id="user-location">Loading...</h1>
+                <div class="weather-icon">☀️</div>
+            </div>
+            
+            <div class="temperature-section">
+                <div class="current-temp">--°C</div>
+                <div class="description">--</div>
+                <div class="min-max-temp">Min: --°C, Max: --°C</div>
+            </div>
+
+            <!-- Weather Details Grid -->
+            <div class="details-grid">
+                <div class="detail-card">
+                    <div class="detail-icon">💧</div>
+                    <div class="detail-label">Humidity</div>
+                    <div class="detail-value" id="humidity">--%</div>
+                </div>
+                <div class="detail-card">
+                    <div class="detail-icon">💨</div>
+                    <div class="detail-label">Wind Speed</div>
+                    <div class="detail-value" id="wind">-- km/h</div>
+                </div>
+                <div class="detail-card">
+                    <div class="detail-icon">🌡️</div>
+                    <div class="detail-label">Feels Like</div>
+                    <div class="detail-value" id="feels-like">--°C</div>
+                </div>
+                <div class="detail-card">
+                    <div class="detail-icon">🔽</div>
+                    <div class="detail-label">Pressure</div>
+                    <div class="detail-value" id="pressure">-- hPa</div>
+                </div>
+                <div class="detail-card">
+                    <div class="detail-icon">👁️</div>
+                    <div class="detail-label">Visibility</div>
+                    <div class="detail-value" id="visibility">-- km</div>
+                </div>
+                <div class="detail-card">
+                    <div class="detail-icon">🌅</div>
+                    <div class="detail-label">Sunrise</div>
+                    <div class="detail-value" id="sunrise">--:--</div>
+                </div>
+                <div class="detail-card">
+                    <div class="detail-icon">🌇</div>
+                    <div class="detail-label">Sunset</div>
+                    <div class="detail-value" id="sunset">--:--</div>
+                </div>
+            </div>
+        </main>
+
+        <!-- 5-Day Forecast -->
+        <section class="forecast-section" aria-label="5-day weather forecast">
+            <h2 class="forecast-title">5-Day Forecast</h2>
+            <div class="forecast-container" id="forecast-container">
+                <!-- Forecast cards will be dynamically inserted here -->
+            </div>
+        </section>
+
+        <!-- Footer start -->
+        <footer class="foot">
+          <p class="credit">
+            Made with ❤️ by
+            <a
+              href="https://chinmayjha.tech"
+              class="chinmay-link"
+              rel="noopener"
+              >Chinmay</a
+            >
+          </p>
+          <span class="copyright" id="copyright"></span>
+        </footer>
+    </div>
+    <!-- Footer end -->
+
+    <!-- JavaScript -->
+    <script src="./assets/app.js"></script>
+</body>
+</html>
